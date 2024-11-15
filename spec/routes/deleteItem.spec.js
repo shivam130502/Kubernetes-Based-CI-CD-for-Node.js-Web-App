@@ -13,7 +13,7 @@ test('it removes item correctly', async () => {
 
     await deleteItem(req, res);
 
-    expect(db.removeItem.mock.calls.length).toBe(1);
+    expect(db.removeItem.mock.calls.length).toBe(1); // method to verify process is successful and complete
     expect(db.removeItem.mock.calls[0][0]).toBe(req.params.id);
     expect(res.sendStatus.mock.calls[0].length).toBe(1);
     expect(res.sendStatus.mock.calls[0][0]).toBe(200);
